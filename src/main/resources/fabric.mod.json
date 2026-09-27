@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "barrelextender",
+  "version": "${version}",
+  "name": "Barrel Extender",
+  "description": "Expands vanilla barrels from 27 slots to 54 slots.",
+  "authors": [
+    "Antarip"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.antarip.barrelextender.BarrelExtenderMod"
+    ]
+  },
+  "mixins": [
+    "barrelextender.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "${minecraft_version}"
+  }
+}
