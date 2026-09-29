@@ -23,7 +23,7 @@ Download the matching JAR for your Minecraft version from the [`outputs/`](./out
 | **Minecraft 26.3** | [`barrelextender-26.3-1.0.0+mc26.3.jar`](./outputs/barrelextender-26.3-1.0.0+mc26.3.jar) |
 | **Minecraft 26.2** | [`barrelextender-26.2-1.0.0+mc26.2.jar`](./outputs/barrelextender-26.2-1.0.0+mc26.2.jar) |
 | **Minecraft 26.1 – 26.1.2** | [`barrelextender-fabric-mc26.1x-1.0.0.jar`](./outputs/barrelextender-fabric-mc26.1x-1.0.0.jar) |
-| **Minecraft 1.21 – 1.21.11** | [`barrelextender-fabric-mc1.21x-1.0.0.jar`](./outputs/barrelextender-fabric-mc1.21x-1.0.0.jar) |
+| **Minecraft 1.21.1 – 1.21.11** | [`barrelextender-fabric-mc1.21x-1.0.0.jar`](./outputs/barrelextender-fabric-mc1.21x-1.0.0.jar) |
 | **Minecraft 1.20.5 – 1.20.6** | [`barrelextender-fabric-mc1.20.5-1.20.6-1.0.0.jar`](./outputs/barrelextender-fabric-mc1.20.5-1.20.6-1.0.0.jar) |
 | **Minecraft 1.20 – 1.20.4** | [`barrelextender-fabric-mc1.20.0-1.20.4-1.0.0.jar`](./outputs/barrelextender-fabric-mc1.20.0-1.20.4-1.0.0.jar) |
 
