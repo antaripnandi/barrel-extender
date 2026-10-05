@@ -9,7 +9,6 @@ import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.ValueInput;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -23,13 +22,18 @@ public abstract class BarrelBlockEntityMixin {
     @Shadow
     private NonNullList<ItemStack> items;
 
-    @Inject(method = "<init>(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V", at = @At("TAIL"))
+    @Inject(method = "<init>(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V", at = @At("TAIL"), require = 0)
     private void barrelextender$expandAfterConstruct(BlockPos pos, BlockState state, CallbackInfo ci) {
         barrelextender$ensureSize();
     }
 
-    @Inject(method = "loadAdditional", at = @At("TAIL"))
-    private void barrelextender$expandAfterRead(ValueInput input, CallbackInfo ci) {
+    @Inject(method = "getItems", at = @At("HEAD"), require = 0)
+    private void barrelextender$onGetItems(CallbackInfoReturnable<NonNullList<ItemStack>> cir) {
+        barrelextender$ensureSize();
+    }
+
+    @Inject(method = "setItems", at = @At("TAIL"), require = 0)
+    private void barrelextender$onSetItems(NonNullList<ItemStack> list, CallbackInfo ci) {
         barrelextender$ensureSize();
     }
 
